@@ -99,7 +99,7 @@ header {
   height: calc(100vh - 80px);
 }
 
-.header__container {
+.container {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
@@ -111,7 +111,7 @@ header {
 
 .header__description {
   width: 40%;
-  padding-right: 12px;
+  padding-right: 16px;
   display: flex;
   flex-direction: column;
 }
@@ -126,6 +126,7 @@ h2 {
   font-weight: 400;
   color: #243E63;
   line-height: 1.5;
+  margin-bottom: 32px;
 }
 
 .header__img--wrapper {
@@ -136,3 +137,141 @@ h2 {
   width: 100% ;
 }
 
+.email__input {
+  width: 100%;
+  position: relative;
+}
+
+input {
+  padding-left: 32px;
+  width: 100%;
+  max-width: 448px;
+  height: 68px;
+  border-radius: 99px;
+  border-width: 2px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.email__btn {
+  position: absolute;
+  top: 0;
+  right: 60px;
+  z-index: 2;
+  border: none;
+  border-radius: 99px;
+  top: 0px;
+  width: 100%;
+  max-width: 160px;
+  height: 52px;
+  cursor: pointer;
+  color: white;
+  background-color: #6415ff;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 8px 8px 0;
+}
+
+.trust {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trusted__customers {
+  color: #A0AEC0;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.trustees {
+  margin-top: 16px;
+  padding-right: 100px;
+  width: 100%;
+  opacity: 0.5;
+}
+
+/*FEATURES FEATURES FEATURES ----------*/
+
+.container__features {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.features__row {
+
+}
+
+.features__headings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features__title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.features__subtitle {
+  font-size: 48px;
+  color: #243E63;
+  font-weight: 700;
+  width: 100%;
+  max-width: 1024px;
+  text-align: center;
+}
+
+.features__description {
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 576px;
+}
+
+
+
+
+
+.features__links {
+  display: flex;
+  flex-direction: row;
+}
+
+.features__link {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 212px;
+}
+
+.features__img--container {
+
+}
+
+.features__img {
+  width: 24px;
+  height: 24px;
+}
+
+.features__text {
+
+}
+
+.feature__name {
+  color: #243E63;
+  font-size: 24px;
+  margin: 16px 0;
+}
+
+p {
+  color: #7C8BA1;
+  font-size: 16px;
+  margin: 16px 0;
+  line-height: 1.5;
+}
