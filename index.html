@@ -9,6 +9,12 @@
       src="https://kit.fontawesome.com/098bcb0743.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    />
+    <script src="index.js"></script>
   </head>
   <body>
     <!--NAVIGATION NAVIGATION NAVIGATION NAVIGATION NAVIGATION NAVIGATION-->
@@ -17,12 +23,47 @@
       <nav>
         <div class="row">
           <div class="nav__container">
+            
             <a href="#">
               <figure class="nav__logo--wrapper">
                 <img src="./assets/Z.png" class="nav__logo" alt="ZReact Logo" />
                 <h1 class="nav__logo--name">ZReact</h1>
               </figure>
             </a>
+            <button class="btn__menu" onclick="openMenu()">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+              <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <i class="fas fa-times"></i>
+              </button>
+              <ul class="menu__links">
+                <li class="menu__list">
+                  <a href="#" class="menu__link" onclick="closeMenu()">About</a>
+                </li>
+                <li class="menu__list">
+                  <a href="#" class="menu__link" onclick="closeMenu()"
+                    >Blog</a
+                  >
+                </li>
+                <li class="menu__list">
+                  <a href="#pricing" class="menu__link no-cursor" onclick="closeMenu()"
+                    >Pricing</a>
+                </li>
+                <li class="menu__list">
+                  <a href="#start" class="menu__link no-cursor" onclick="closeMenu()"
+                    >Contact Us</a>
+                </li>
+                <li class="menu__list">
+                  <a href="#" class="menu__link no-cursor" onclick="closeMenu()"
+                    >Login</a>
+                </li>
+                <li class="menu__list">
+                  <a href="#" class="menu__link no-cursor" onclick="closeMenu()"
+                    >Sign Up</a>
+                </li>
+              </ul>
+            </div>
             <ul class="nav__links">
               <li><a href="#" class="nav__link">About</a></li>
               <li><a href="#" class="nav__link">Blog</a></li>
@@ -93,7 +134,7 @@
             <h2 class="title">
               <span class="purple">FEATURES</span>
             </h2>
-            <h1 class="subtitle">
+            <h1 class="subtitle features__subtitle">
               We have Amazing <span class="purple">Service.</span>
             </h1>
             <h2 class="features__description">
@@ -211,7 +252,7 @@
           <div class="quality__work--wrapper">
             <div class="quality__title">
               <h2 class="title">QUALITY WORK</h2>
-              <h1 class="subtitle">
+              <h1 class="subtitle quality__subtitle">
                 Designed & Developed by
                 <span class="purple">Professionals.</span>
               </h1>
@@ -304,15 +345,15 @@
               <div class="tags">
                 <div class="tag">
                   <div class="title__logo--wrapper">
-                  <figure class="tag__img dollar__wrapper">
-                    <img
-                      src="./assets/dollar-sign-solid.svg"
-                      class="dollar"
-                      alt=""
-                    />
-                  </figure>
-                  <h3 class="tag__title">Affordable</h3>
-                </div>
+                    <figure class="tag__img dollar__wrapper">
+                      <img
+                        src="./assets/dollar-sign-solid.svg"
+                        class="dollar"
+                        alt=""
+                      />
+                    </figure>
+                    <h3 class="tag__title">Affordable</h3>
+                  </div>
                   <p class="tag__description">
                     We promise to offer you the best rate we can - at par with
                     the industry standard.
@@ -320,15 +361,15 @@
                 </div>
                 <div class="tag">
                   <div class="title__logo--wrapper">
-                  <figure class="tag__img briefcase__wrapper">
-                    <img
-                      src="./assets/briefcase-solid.svg"
-                      class="briefcase"
-                      alt=""
-                    />
-                  </figure>
-                  <h3 class="tag__title">Professionalism</h3>
-                </div>
+                    <figure class="tag__img briefcase__wrapper">
+                      <img
+                        src="./assets/briefcase-solid.svg"
+                        class="briefcase"
+                        alt=""
+                      />
+                    </figure>
+                    <h3 class="tag__title">Professionalism</h3>
+                  </div>
                   <p class="tag__description">
                     We assure you that our templates are designed and created by
                     professional designers.
@@ -352,7 +393,7 @@
         <div class="row">
           <div class="pricing__title">
             <h2 class="title">PRICING</h2>
-            <h1 class="subtitle">
+            <h1 class="subtitle pricing__subtitle">
               Reasonable & Flexible <span class="purple">Plans.</span>
             </h1>
             <p class="pricing__description">
@@ -371,7 +412,7 @@
               <div class="who__personal">
                 <h3 class="for__personal">For Individuals</h3>
                 <p class="attributes__personal">
-                  30 Templates<br>7 Landing Pages<br>12 Internal Pages<br>Basic
+                  30 Templates<br />7 Landing Pages<br />12 Internal Pages<br />Basic
                   Assistance
                 </p>
               </div>
@@ -388,7 +429,7 @@
               <div class="who__business">
                 <h3 class="for__business">For Small Businesses</h3>
                 <p class="attributes__business">
-                  60 Templates<br>15 Landing Pages<br>22 Internal Pages<br>Priority
+                  60 Templates<br />15 Landing Pages<br />22 Internal Pages<br />Priority
                   Assistance
                 </p>
               </div>
@@ -405,7 +446,7 @@
               <div class="who__enterprise">
                 <h3 class="for__enterprise">For Large Companies</h3>
                 <p class="attributes__enterprise">
-                  90 Templates<br>27 Landing Pages<br>37 Internal Pages<br>Personal
+                  90 Templates<br />27 Landing Pages<br />37 Internal Pages<br />Personal
                   Assistance
                 </p>
               </div>
@@ -423,42 +464,99 @@
     <section id="testimonials">
       <div class="container">
         <div class="row">
-          <figure class="testimonials__img--wrapper">
-            <img src="./assets/love.svg" alt="" class="testimonials__img" />
-          </figure>
           <div class="testimonials__wrapper">
-            <div class="testimonials__titling">
-              <h2 class="title">TESTIMONIALS</h2>
-              <h1 class="subtitle">
-                Our Clients <span class="purple">Love Us.</span>
-              </h1>
-              <p class="testimonials__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua enim
-                ad minim veniam.
-              </p>
-            </div>
+            <figure class="testimonials__img--wrapper">
+              <img src="./assets/love.svg" alt="" class="testimonials__img" />
+            </figure>
+            <div class="testimonials__wrapper--title">
+              <div class="testimonials__titling">
+                <h2 class="title">TESTIMONIALS</h2>
+                <h1 class="subtitle">
+                  Our Clients <span class="purple">Love Us.</span>
+                </h1>
+                <p class="testimonials__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                  enim ad minim veniam.
+                </p>
+              </div>
+              <div class="reviews">
+                <div class="review__full">
+                  <div class="review__full--1">
+                    <div class="review">
+                      <div class="stars">
+                        <i class="fa-solid fa-star" style="color: #f6ad55"></i>
+                        <i class="fa-solid fa-star" style="color: #f6ad55"></i>
+                        <i class="fa-solid fa-star" style="color: #f6ad55"></i>
+                        <i class="fa-solid fa-star" style="color: #f6ad55"></i>
+                        <i class="fa-solid fa-star" style="color: #f6ad55"></i>
+                      </div>
 
-            <div class="review">
-              5 stars logo
+                      <h3 class="review__heading">
+                        Love the Developer Experience and Design Principles !
+                      </h3>
+                      <p class="review__description">
+                        Sinor Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia. Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam.
+                      </p>
+                    </div>
+                    <div class="reviewer reviewer2">
+                      <figure class="reviewer__img--wrapper">
+                        <img
+                          src="./assets/FELLA.avif"
+                          alt=""
+                          class="reviewer__img"
+                        />
+                      </figure>
+                      <div class="reviewer__personnel">
+                        <h3 class="reviewer__name">Adam Cuppy</h3>
+                        <p class="reviewer__job">Founder, EventsNYC</p>
+                      </div>
+                    </div>
+                  </div>
 
-              <h3 class="review__heading">Amazing User Experience</h3>
-              <p class="review__description">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia. Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco.
-              </p>
-            </div>
-            <div class="reviewer">
-              <figure class="reviewer__img--wrapper">
-                <img src="./assets/WOMAN.avif" alt="" class="reviewer__img" />
-              </figure>
-              <h3 class="reviewer__name">Charlotte Hale</h3>
-              <p class="reviewer__job">Director, Delos Inc.</p>
-              Add 2 arrow buttons here
+                  <div class="review__full--2">
+                    <div class="review">
+                      <div class="stars">
+                        <i class="fa-solid fa-star" style="color: #f6ad55"></i>
+                        <i class="fa-solid fa-star" style="color: #f6ad55"></i>
+                        <i class="fa-solid fa-star" style="color: #f6ad55"></i>
+                        <i class="fa-solid fa-star" style="color: #f6ad55"></i>
+                        <i class="fa-solid fa-star" style="color: #f6ad55"></i>
+                      </div>
+
+                      <h3 class="review__heading">Amazing User Experience</h3>
+                      <p class="review__description">
+                        Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamco.
+                      </p>
+                    </div>
+                    <div class="reviewer">
+                      <figure class="reviewer__img--wrapper">
+                        <img
+                          src="./assets/WOMAN.avif"
+                          alt=""
+                          class="reviewer__img"
+                        />
+                      </figure>
+                      <div class="reviewer__personnel">
+                        <h3 class="reviewer__name">Charlotte Hale</h3>
+                        <p class="reviewer__job">Director, Delos Inc.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -470,76 +568,78 @@
     <section id="faqs">
       <div class="container">
         <div class="row">
-          <div class="faq__titling">
-            <h2 class="title">FAQS</h2>
-            <h1 class="subtitle">
-              You have <span class="purple">Questions ?</span>
-            </h1>
-            <p class="faqs__description">
-              And we have got answers to all of them. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit.
-            </p>
-          </div>
-          <div class="questions--wrapper">
-            <div class="question">
-              <h3 class="question__title">
-                Are all the templates easily customisable?
-              </h3>
-              <p class="question__answer">
-                Yes, they all are. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Repellendus sequi possimus enim corporis
-                aliquam aut cum odit quae deleniti totam.
+          <div class="faq__wrapper">
+            <div class="faq__titling">
+              <h2 class="title">FAQS</h2>
+              <h1 class="subtitle faq__subtitle">
+                You have <span class="purple">Questions ?</span>
+              </h1>
+              <p class="faqs__description">
+                And we have got answers to all of them. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit.
               </p>
             </div>
-            <div class="question">
-              <h3 class="question__title">
-                Are all the templates easily customisable?
-              </h3>
-              <p class="question__answer">
-                Yes, they all are. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Repellendus sequi possimus enim corporis
-                aliquam aut cum odit quae deleniti totam.
-              </p>
-            </div>
-            <div class="question">
-              <h3 class="question__title">
-                Are all the templates easily customisable?
-              </h3>
-              <p class="question__answer">
-                Yes, they all are. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Repellendus sequi possimus enim corporis
-                aliquam aut cum odit quae deleniti totam.
-              </p>
-            </div>
-            <div class="question">
-              <h3 class="question__title">
-                Are all the templates easily customisable?
-              </h3>
-              <p class="question__answer">
-                Yes, they all are. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Repellendus sequi possimus enim corporis
-                aliquam aut cum odit quae deleniti totam.
-              </p>
-            </div>
-            <div class="question">
-              <h3 class="question__title">
-                Are all the templates easily customisable?
-              </h3>
-              <p class="question__answer">
-                Yes, they all are. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Repellendus sequi possimus enim corporis
-                aliquam aut cum odit quae deleniti totam.
-              </p>
-            </div>
-            <div class="question">
-              <h3 class="question__title">
-                Are all the templates easily customisable?
-              </h3>
-              <p class="question__answer">
-                Yes, they all are. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Repellendus sequi possimus enim corporis
-                aliquam aut cum odit quae deleniti totam.
-              </p>
+            <div class="questions--wrapper">
+              <div class="question">
+                <h3 class="question__title">
+                  Are all the templates easily customisable?
+                </h3>
+                <p class="question__answer">
+                  Yes, they all are. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Repellendus sequi possimus enim corporis
+                  aliquam aut cum odit quae deleniti totam.
+                </p>
+              </div>
+              <div class="question">
+                <h3 class="question__title">
+                  Are all the templates easily customisable?
+                </h3>
+                <p class="question__answer">
+                  Yes, they all are. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Repellendus sequi possimus enim corporis
+                  aliquam aut cum odit quae deleniti totam.
+                </p>
+              </div>
+              <div class="question">
+                <h3 class="question__title">
+                  Are all the templates easily customisable?
+                </h3>
+                <p class="question__answer">
+                  Yes, they all are. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Repellendus sequi possimus enim corporis
+                  aliquam aut cum odit quae deleniti totam.
+                </p>
+              </div>
+              <div class="question">
+                <h3 class="question__title">
+                  Are all the templates easily customisable?
+                </h3>
+                <p class="question__answer">
+                  Yes, they all are. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Repellendus sequi possimus enim corporis
+                  aliquam aut cum odit quae deleniti totam.
+                </p>
+              </div>
+              <div class="question">
+                <h3 class="question__title">
+                  Are all the templates easily customisable?
+                </h3>
+                <p class="question__answer">
+                  Yes, they all are. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Repellendus sequi possimus enim corporis
+                  aliquam aut cum odit quae deleniti totam.
+                </p>
+              </div>
+              <div class="question">
+                <h3 class="question__title">
+                  Are all the templates easily customisable?
+                </h3>
+                <p class="question__answer">
+                  Yes, they all are. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Repellendus sequi possimus enim corporis
+                  aliquam aut cum odit quae deleniti totam.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -554,12 +654,13 @@
           <div class="purple__box">
             <div class="start__description">
               <h1 class="start__title">
-                Developers all over the world are happily using Treact.
+                Developers all over the world are happily using Zreact.
               </h1>
-            </div>
-            <div class="start__btns">
-              <button class="get-started__btn">Get Started</button>
-              <button class="contact-us__btn">Contact Us</button>
+
+              <div class="start__btns">
+                <button class="get-started__btn">Get Started</button>
+                <button class="contact-us__btn">Contact Us</button>
+              </div>
             </div>
           </div>
         </div>
@@ -570,61 +671,92 @@
 
     <footer>
       <div class="row">
+        <div class="links__container">
         <div class="links">
           <div class="link">
             <h3 class="link__title">MAIN</h3>
-            <a href="">Blog</a>
-            <a href="">FAQs</a>
-            <a href="">Support</a>
-            <a href="">About Us</a>
+            <a href="" class="link__info"><p class="link__info--writing">Blog</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">FAQs</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Support</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">About Us</p></a>
           </div>
           <div class="link">
             <h3 class="link__title">PRODUCT</h3>
-            <a href="">Log In</a>
-            <a href="">Personal</a>
-            <a href="">Business</a>
-            <a href="">Team</a>
+            <a href="" class="link__info"><p class="link__info--writing">Log In</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Personal</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Business</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Team</p></a>
           </div>
           <div class="link">
             <h3 class="link__title">PRESS</h3>
-            <a href="">Logos</a>
-            <a href="">Events</a>
-            <a href="">Stories</a>
-            <a href="">Office</a>
+            <a href="" class="link__info"><p class="link__info--writing">Logos</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Events</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Stories</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Office</p></a>
           </div>
           <div class="link">
             <h3 class="link__title">TEAM</h3>
-            <a href="">Career</a>
-            <a href="">Founders</a>
-            <a href="">Culture</a>
-            <a href="">Onboarding</a>
+            <a href="" class="link__info"><p class="link__info--writing">Career</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Founders</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Culture</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Onboarding</p></a>
           </div>
           <div class="link">
             <h3 class="link__title">LEGAL</h3>
-            <a href="">GDPR</a>
-            <a href="">Privacy Policy</a>
-            <a href="">Terms of Service</a>
-            <a href="">Disclaimer</a>
+            <a href="" class="link__info"><p class="link__info--writing">GDPR</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Privacy Policy</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Terms of Service</p></a>
+            <a href="" class="link__info"><p class="link__info--writing">Disclaimer</p></a>
           </div>
         </div>
+      </div>
+        <div class="line"></div>
+        <div class="footer__info--wrapper">
         <div class="footer__info">
-          <img src="./assets/Z.png" alt="" class="footer__logo" />
+          <div class="footer__logo--wrapper">
+            <img src="./assets/Z White.png" alt="" class="footer__logo" />
+            <h1 class="footer__logo--name">ZReact.Inc</h1>
+          </div>
           <p class="footer__copyright">
             © 2023 Zreact Inc. All Rights Reserved.
           </p>
           <div class="social__links">
-            <div class="social__link">
-              <a href=""><img src="" alt="" />F</a>
-            </div>
-            <div class="social__link">
-              <a href=""><img src="" alt="" />T</a>
-            </div>
-            <div class="social__link">
-              <a href=""><img src="" alt="" />Y</a>
-            </div>
+            <a href="" class="social__linky"
+              ><img
+                src="./assets/facebook-f.svg"
+                alt=""
+                class="social__link"
+            /></a>
+
+            <a href="" class="social__linky"
+              ><img src="./assets/youtube.svg" alt="" class="social__link"
+            /></a>
+
+            <a href="" class="social__linky"
+              ><img src="./assets/x-twitter.svg" alt="" class="social__link"
+            /></a>
           </div>
+        </div>
         </div>
       </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(".review__full").slick({
+        arrows: true,
+        prevArrow:
+          "<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-arrow-left' style='color: #6415ff;'></i></button>",
+        nextArrow:
+          "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-arrow-right' style='color: #6415ff;'></i></button>",
+      });
+    </script>
   </body>
 </html>
